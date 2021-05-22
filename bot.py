@@ -9,7 +9,7 @@ import asyncio
 bot = commands.Bot(command_prefix='ms!', help_command=None)
 
 #load the cogs
-cogs = ['fun', 'mod', 'owner', 'anime', 'math', 'misc', 'giveaway', 'RussianRoulette', 'stats',
+cogs = ['fun', 'mod', 'owner', 'anime', 'math', 'misc', 'Giveaway', 'RussianRoulette', 'stats',
         'Economy', 'Tickets', 'Levelsystem', 'Warn']
 for cog in cogs:
     bot.load_extension(f'cogs.{cog}')
