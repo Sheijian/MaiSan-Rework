@@ -13,6 +13,7 @@ class Giveaways(commands.Cog):
     async def on_ready(self):
         print("Giveaways are now ready!")
 
+    #time converter    
     def convert(self, time):
         pos = ["s", "m", "h", "d"]
 
@@ -29,6 +30,7 @@ class Giveaways(commands.Cog):
 
         return val * time_dict[unit]
 
+    #start the giveaway
     @commands.command()
     @commands.has_permissions(manage_guild=True)
     async def gstart(self, ctx):
@@ -105,6 +107,7 @@ class Giveaways(commands.Cog):
             embed.add_field(name="Ideal Solution:", value="Get the perms, lmao!")
             await ctx.send(embed=embed)
 
+    #reroll the giveaway        
     @commands.command()
     @has_permissions(manage_guild=True)
     async def reroll(self, ctx, channel: discord.TextChannel, id_: int):
